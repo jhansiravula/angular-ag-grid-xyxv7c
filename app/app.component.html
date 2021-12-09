@@ -1,0 +1,11 @@
+<hello name="{{ name }}"></hello>
+
+<label> filter: <input type="text" [(ngModel)]="filter"></label>
+<label> timeout: <input type="number" [(ngModel)]="timeout"></label>
+
+<ag-grid-angular [datasource]="dataSource"
+                 [columnDefs]="colDefinitions"
+                 rowModelType="infinite"
+                 (cellClicked)="onCellClicked($event)"
+                 style="width: 100%; height: 300px;" 
+                 class="ag-theme-fresh"></ag-grid-angular>
